@@ -1,5 +1,6 @@
 <?php 
 
+// creating  the contact form ,using the POST method.
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = $_POST["name"];
     $email =  $_POST["email"];
@@ -11,6 +12,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // TODO: Send Email
 
+// the header will includes  in the briwser  address, 
+    // the value of status replaced by the contact-thanks.php file.
     header("Location: contact.php?status=thanks");
     exit;
 }

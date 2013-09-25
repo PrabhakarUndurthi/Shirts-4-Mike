@@ -10,7 +10,7 @@ include ('inc/header.php'); ?>
 
 	   <h1>Contact</h1>
 	    <p> I&rsquo; d love to hear from you! Complete the form to send me an email.</p>
-	    <form method= "post"  action= "contact-process.php">
+	    <form method= "post"  action= "contact.php">
 	    	<table>
 	    		<tr>
 	    		  <th>
