@@ -1,28 +1,31 @@
+
+<?php include ("inc/products.php"); ?>
+
 <?php 
-// creating  an array which holds the collection of shirts in the shirts moduel.
-$products[101] = "Logo Shirt , Red";
-$products [102] = "Mike the Frog, Black";
-$products [103] = "Mike the Frog Shirt, BLue";
-$products[104] = "Logo Shirt, Green";
+$pageTitle = "Mike's Full Catalog of Shirts";
+$section = "shirts";
+include('inc/header.php'); ?>
 
-?><?php
+    <div class="section shirts page">
 
-$pageTitle = "Mike's Full Catalog Of Shirts";
-$section  = "shirts";
-include ('inc/header.php'); ?>
+      <div class="wrapper">
 
-      <div class= "section page">
-      	<div class= "wrapper">
-           <h1> Mike&rsquo; s Full Catalog Of Shirts</h1>
+        <h1>Mike&rsquo;s Full Catalog of Shirts</h1>
+
+        <ul class="products">
+          <?php foreach($products as $product_id => $product) { 
+              echo "<li>";
+              echo '<a href= "shirt.php?id =' . $product_id . '">';
+              echo '<img src="' . $product["img"] . '" alt="' . $product["name"] . '">';
+              echo "<p>View Details</p>";
+              echo "</a>";
+              echo "</li>";
+            }
+          ?>
+        </ul>
+
       </div>
-      
-      <ul>
-      	<?php  foreach ($products as $product) { ?>
-      	<li><?php echo $product; ?> </li>
-      	<?php } ?>
 
-      </ul>
-  </div>
+    </div>
 
-
-<?php include ('inc/footer.php'); ?>      
+<?php include('inc/footer.php') ?>
