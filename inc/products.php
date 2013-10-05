@@ -1,5 +1,22 @@
 <?php
 
+function get_list_view_html($product_id, $product) {
+    
+    $output = "";
+    // Showing the details of individual shirt , from the shirts collectoin.
+
+    $output = $output . "<li>";
+    $output = $output . '<a href="shirt.php?id=' . $product_id . '">';
+    $output = $output . '<img src="' . $product["img"] . '" alt="' . $product["name"] . '">';
+    $output = $output . "<p>View Details</p>";
+    $output = $output . "</a>";
+    $output = $output . "</li>";
+
+    return $output;
+}
+
+
+//Entries for the each shirt listed in the shirts collection ,along with thier valid Paypal buttons.
 $products = array();
 $products[101] = array(
   "name" => "Logo Shirt, Red",
