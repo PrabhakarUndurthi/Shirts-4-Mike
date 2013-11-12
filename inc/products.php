@@ -1,11 +1,11 @@
 <?php
 
-function get_list_view_html($product_id, $product) {
+function get_list_view_html($product) {
     
     $output = "";
 
     $output = $output . "<li>";
-    $output = $output . '<a href="' . BASE_URL . 'shirts/' . $product_id . '/">';
+    $output = $output . '<a href="' . BASE_URL . 'shirts/' . $product["sku"] . '/">';
     $output = $output . '<img src="' . BASE_URL . $product["img"] . '" alt="' . $product["name"] . '">';
     $output = $output . "<p>View Details</p>";
     $output = $output . "</a>";
@@ -13,6 +13,38 @@ function get_list_view_html($product_id, $product) {
 
     return $output;
 }
+
+function get_products_recent() {
+    $recent = array();
+    $all = get_products_all();
+
+    $total_products = count($all);
+    $position = 0;
+    
+    foreach($all as $product) {
+        $position = $position + 1;
+        if ($total_products - $position < 4) {
+            $recent[] = $product;
+        }
+    }
+    return $recent;
+}
+
+function get_products_search($s) {
+    $results = array();
+    $all = get_products_all();
+    foreach ($all as $product ) {
+        //TODO: if (there's a match)
+        $results[] = $product;
+        //}
+    }
+    return $results;
+       
+    }
+
+
+
+function get_products_all() {
 
 $products = array();
 $products[101] = array(
@@ -71,5 +103,14 @@ $products[108] = array(
     "paypal" => "JMFK7P7VEHS44",
     "sizes" => array("Large","X-Large")
 );
+
+
+foreach ($products as $product_id => $product) {
+        $products[$product_id]["sku"] = $product_id;
+    }
+
+    return $products;
+}
+
 
 ?>
