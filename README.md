@@ -1,16 +1,14 @@
-Shirts-4-Mike
-=============
-
 Shirts 4 Mike is an e-commerce Tea shirt store
 
 
 Welcome to Shirts 4 Mike
 
 Description :
-   Shirts 4 mike is an e-commerce online shopping application , built with PHP, integrated with PayPal.
-   This application allows the users to buy their favorite tea shirts availble on the site. Currently this application is only
-   ment to sell Tea shirts alone. This application allows the the customers to purchage their favorite tea shirts in different sizes.
-   Upon the successful shoping , customers will be redirected to the PayPal for the  secure payment transcition.
+   Shirts 4 mike is an e-commerce online shopping application , built with PHP. integrated with PayPal.
+   This application allows the users to buy their favorite tea shirts available on the site. Currently this application is only
+   ment to sell Tea shirts alone. This application allows the  customers to purchage their favorite tea shirts in different sizes.
+   Upon the successful shopping , customers will be redirected to the PayPal for the  secure payment transaction
+The customer support  Contact model is evaluated with phpmailer.
    
    
    
@@ -24,7 +22,7 @@ This web application was built under windows  platform:
  1) Download the xampp server from the open source platform
  http://www.apachefriends.org/en/xampp.html
  
- 2) Install the Sublime tex editor (Optional, but recommanded.)
+ 2) Install the Sublime tex editor (Optional, but recommended.)
  
  http://www.sublimetext.com/
  
@@ -48,7 +46,7 @@ This web application was built under windows  platform:
  
  7) Create your PayPal Business account and set up your website information .
  
- 8) Go to Your payPal account and /myselling tools add the buttons to the site. 
+ 8) Go to Your PayPal account and /myselling tools add the buttons to the site. 
  NOTE: Carefully handle this part.(PayPal)
  
  9) Keep pushing your code to Github.
@@ -181,19 +179,4 @@ This web application was built under windows  platform:
 
    Holds the files related to the shirts,configuration and home page of the site.
 
- 
-
-
-
-
-
- 
- 
- 
- 
- 
- 
- 
- 
- 
  
