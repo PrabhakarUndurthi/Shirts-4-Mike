@@ -2,15 +2,28 @@
 
 require_once("../inc/config.php");
 
+/* This file contains instructions for three different states of the form:
+ *   - Displaying the initial contact form
+ *   - Handling the form submission and sending the email
+ *   - Displaying a thank you message
+ */
+
+// a request method of post indicates that
+// we are receiving a form submission
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    // the form has fields for name, email, and message
     $name = trim($_POST["name"]);
     $email = trim($_POST["email"]);
     $message = trim($_POST["message"]);
 
+    // the fields name, email, and message are required
     if ($name == "" OR $email == "" OR $message == "") {
         $error_message = "You must specify a value for name, email address, and message.";
     }
 
+    // this code checks for malicious code attempting
+    // to inject values into the email header
     if (!isset($error_message)) {
         foreach( $_POST as $value ){
             if( stripos($value,'Content-Type:') !== FALSE ){
@@ -19,6 +32,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         }
     }
 
+    // the field named address is used as a spam honeypot
+    // it is hidden from users, and it must be left blank
     if (!isset($error_message) && $_POST["address"] != "") {
         $error_message = "Your form submission has an error.";
     }
@@ -30,6 +45,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error_message = "You must specify a valid email address.";
     }
 
+    // if, after all the checks above, there is no message, then we
+    // have a valid form submission; let's send the email
     if (!isset($error_message)) {
         $email_body = "";
         $email_body = $email_body . "Name: " . $name . "<br>";
@@ -42,6 +59,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $mail->Subject    = "Shirts 4 Mike Contact Form Submission | " . $name;
         $mail->MsgHTML($email_body); 
 
+        // if the email is sent successfully, redirect to a thank you page;
+        // otherwise, set a new error message
         if($mail->Send()) {
             header("Location: " . BASE_URL . "contact/?status=thanks");
             exit;
@@ -63,6 +82,7 @@ include(ROOT_PATH . 'inc/header.php'); ?>
 
             <h1>Contact</h1>
 
+            <?php // if status=thanks in the query string, display an thank you message instead of the form ?>
             <?php if (isset($_GET["status"]) AND $_GET["status"] == "thanks") { ?>
                 <p>Thanks for the email! I&rsquo;ll be in touch shortly!</p>
             <?php } else { ?>
@@ -103,6 +123,8 @@ include(ROOT_PATH . 'inc/header.php'); ?>
                             </td>
                         </tr> 
                         <tr style="display: none;">
+                            <?php // the field named address is used as a spam honeypot ?>
+                            <?php // it is hidden from users, and it must be left blank ?>
                             <th>
                                 <label for="address">Address</label>
                             </th>
