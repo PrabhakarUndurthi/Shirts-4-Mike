@@ -64,11 +64,15 @@ This web application was built under windows  platform:
  This is the final project structure :
  
  
- | --htdocs
+| --htdocs
 |   |--contact
 | --|  |--index.php
+      --
+      
 | --|--css
 | --|  |--style.css
+    ---
+    
 | --|--img
 | --|  |--shirts
 | --|     |--shirt-101.jpg
@@ -110,6 +114,10 @@ This web application was built under windows  platform:
 | --|     |--logo-paypal.png
 | --|     |--mike-the-frog.png
 | --|     |--nav-sprite.png
+        ---
+        
+        
+        
 | --|--inc
 | --|  |--phpmailer
 | --|     |--class.phpmailer.php
@@ -119,6 +127,10 @@ This web application was built under windows  platform:
 | --|   --|--partial-list-navigation.html.php
 | --|   --|--partial-product-list-view.html.php
 | --|   --|--products.php
+
+        ---
+        
+        
 | --|--receipt
 | --|   |--index.php
 | --|--search
