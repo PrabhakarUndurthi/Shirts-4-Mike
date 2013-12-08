@@ -1,5 +1,4 @@
 
-
 Shirts-4-Mike
 =============
 
@@ -65,90 +64,7 @@ This web application was built under windows  platform:
  
  Description of contents.
  
- This is the final project structure :
  
- 
-| --htdocs
-|   |--contact
-| --|  |--index.php
-      --
-      
-| --|--css
-| --|  |--style.css
-    ---
-    
-| --|--img
-| --|  |--shirts
-| --|     |--shirt-101.jpg
-| --|     |--shirt-102.jpg
-| --|     |--shirt-103.jpg
-| --|     |--shirt-104.jpg
-| --|     |--shirt-105.jpg
-| --|     |--shirt-106.jpg
-| --|     |--shirt-107.jpg
-| --|     |--shirt-108.jpg
-| --|     |--shirt-109.jpg
-| --|     |--shirt-110.jpg
-| --|     |--shirt-111.jpg
-| --|     |--shirt-121.jpg
-| --|     |--shirt-113.jpg
-| --|     |--shirt-114.jpg
-| --|     |--shirt-115.jpg
-| --|     |--shirt-116.jpg
-| --|     |--shirt-117.jpg
-| --|     |--shirt-118.jpg
-| --|     |--shirt-119.jpg
-| --|     |--shirt-120.jpg
-| --|     |--shirt-121.jpg
-| --|     |--shirt-122.jpg
-| --|     |--shirt-123.jpg
-| --|     |--shirt-124.jpg
-| --|     |--shirt-125.jpg
-| --|     |--shirt-126.jpg
-| --|     |--shirt-127.jpg
-| --|     |--shirt-128.jpg
-| --|     |--shirt-129.jpg
-| --|     |--shirt-130.jpg
-| --|     |--shirt-131.jpg
-| --|     |--shirt-132.jpg
-| --|     |--banner-background.jpg
-| --|     |--banner-link-arrow.jpg
-| --|     |--branding-title.png
-| --|     |--logo-paypal-classic.png
-| --|     |--logo-paypal.png
-| --|     |--mike-the-frog.png
-| --|     |--nav-sprite.png
-        ---
-        
-        
-        
-| --|--inc
-| --|  |--phpmailer
-| --|     |--class.phpmailer.php
-| --|   --|--config.php
-| --|   --|--footer.php
-| --|   --|--header.php
-| --|   --|--partial-list-navigation.html.php
-| --|   --|--partial-product-list-view.html.php
-| --|   --|--products.php
-
-        ---
-        
-        
-| --|--receipt
-| --|   |--index.php
-| --|--search
-| --|   |--index.php
-| --|--shirts
-| --|   |--shirt.php
-| --|   |--shirts.php
-| --|-- |--.htaceess
-| --| --|--config.php
-| --| --|--favicon.ico
-| --| --|--index.php
-| --| --|--.htaceess
-
-
 
   htdocs 
   
